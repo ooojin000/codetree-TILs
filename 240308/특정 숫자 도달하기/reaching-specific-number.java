@@ -8,18 +8,23 @@ public class Main {
 
         int sum = 0;
         double avg = 0;
+        int tmp = 0;
 
         for(int i=0; i<10; i++) {
             arr[i] = sc.nextInt();
-            if(arr[i]>=250){
-                for(int j=0; j<i; j++){
-                    sum += arr[j];
-                    avg = sum/(j+1);
-                }
+            
+            if (arr[i] >= 250) {
+                tmp = i;
+                break;
             }
         }
-     
-        System.out.print(sum + " " + avg);
+
+        for (int i = 0; i < tmp; i++) {
+            sum += arr[i];
+        }
+
+        System.out.printf("%d %.1f", sum, (double)sum / tmp);
+
 
     }
 }
