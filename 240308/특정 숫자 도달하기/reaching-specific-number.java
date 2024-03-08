@@ -12,11 +12,11 @@ public class Main {
 
         for(int i=0; i<10; i++) {
             arr[i] = sc.nextInt();
-            
+         
             if (arr[i] >= 250) {
-                tmp = i;
                 break;
             }
+            tmp++;
         }
 
         for (int i = 0; i < tmp; i++) {
