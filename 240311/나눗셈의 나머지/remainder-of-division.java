@@ -8,7 +8,7 @@ public class Main {
         int[] arr = new int[10];
 
         while(a > 1) {
-            int n = a %b;
+            int n = a % b;
             arr[n]++;
             a /= b;
         }
@@ -16,6 +16,7 @@ public class Main {
         int result = 0;
 
         for(int i=0; i<10; i++) {
+            System.out.println(arr[i]);
             result += arr[i] * arr[i];
         }
 
