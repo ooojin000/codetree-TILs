@@ -1,41 +1,38 @@
 import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        char[] results = new char[3];
-        int cntA = 0;
-        int cntB = 0;
-        int cntC = 0;
-        int cntD = 0;
+        // 카운팅 배열의 1에는 A인 사람의 수가, 2에는 B가, 3에는 C가, 4에는 D가 들어감
+        int[] countArr = new int[5];
+        // type num = 분류 번호
+        int typeNum = 0;
+        char s;
+        int t;
 
-        for (int i = 0; i < 3; i++) {
-            String symptoms = sc.next();
+        // s와 t를 입력받은 후 카운팅 배열을 통해 각각의 빈도 저장
+        for(int i = 0; i < 3; i++) {
+            s = sc.next().charAt(0);
+            t = sc.nextInt();
 
-            int temperature = sc.nextInt();
-
-            if (symptoms.equalsIgnoreCase("Y") && temperature >= 37) {
-                results[i] = 'A';
-                cntA++;
-            } else if (symptoms.equalsIgnoreCase("N") && temperature >= 37) {
-                results[i] = 'B';
-                cntB++;
-            } else if (symptoms.equalsIgnoreCase("Y") && temperature < 37) {
-                results[i] = 'C';
-                cntC++;
-            } else if (symptoms.equalsIgnoreCase("N") && temperature < 37) {
-                results[i] = 'D';
-                cntD++;
-            } else {
-                results[i] = 'X';
-            }
+            if(t >= 37 && s == 'Y')
+                typeNum = 1;
+            else if(t >= 37)
+                typeNum = 2;
+            else if(s == 'Y')
+                typeNum = 3;
+            else
+                typeNum = 4;
+            countArr[typeNum]++;
         }
 
-        if (cntA >= 2) {
-            System.out.println(cntA + " " + cntB + " " + cntC + " " + cntD + " E");
-        } else {
-            System.out.println(cntA + " " + cntB + " " + cntC + " " + cntD);
+        // A부터 D까지 나온 횟수를 출력
+        for(int i = 1; i <= 4; i++) {
+            System.out.print(countArr[i] + " ");
         }
-
+        
+        if(countArr[1] >= 2)
+            System.out.print("E");
     }
 }
