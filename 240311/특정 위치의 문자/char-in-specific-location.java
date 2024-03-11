@@ -5,10 +5,18 @@ public class Main {
         char[] word = new char[]{'L', 'E', 'B', 'R', 'O', 'S'};  
         char n = sc.next().charAt(0);
 
+        int idx = -1;
+
         for(int i=0; i<6; i++){
             if(word[i] == n){
-                System.out.print(i);
+                idx = i;
             }
+        }
+
+        if (idx == -1) {
+            System.out.println("None");
+        } else {
+            System.out.print(idx);
         }
     }
 }
