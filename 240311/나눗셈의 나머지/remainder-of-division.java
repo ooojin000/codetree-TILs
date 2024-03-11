@@ -7,7 +7,7 @@ public class Main {
 
         int[] arr = new int[10];
 
-        while(a >= 1) {
+        while(a > 1) {
             int n = a %b;
             arr[n]++;
             a /= b;
