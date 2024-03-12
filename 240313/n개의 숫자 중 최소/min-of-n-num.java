@@ -15,6 +15,11 @@ public class Main {
             arr[i] = sc.nextInt();
             if(minVal > arr[i]) {
                 minVal = arr[i];
+            }
+        }
+
+        for(int i=0; i<n; i++) {
+            if(arr[i] == minVal) {
                 cnt++;
             }
         }
