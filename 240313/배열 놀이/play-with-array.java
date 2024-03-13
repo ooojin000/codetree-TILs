@@ -28,7 +28,7 @@ public class Main {
                 int a = sc.nextInt();
                 int b = sc.nextInt();
                 for(int j=a-1; j<b; j++) {
-                    System.out.print(nArr[j] + " ");
+                    System.out.println(nArr[j] + " ");
                 }
             }
         }
