@@ -17,20 +17,31 @@ public class Main {
             if(qType == 1) {
                 int idx = sc.nextInt();
                 System.out.println(nArr[idx-1]);
+                
             } else if(qType == 2) { 
                 int idx = sc.nextInt();
+                boolean found = false;
                 for(int j=0; j<n; j++) {
                     if(nArr[j] == idx) {
+                        found = true;
                         System.out.println(j+1);
+                        break;
                     }
+                    
                 }
+                if(!found) {
+                    System.out.println(0);
+                }
+
             } else if(qType == 3) { 
                 int a = sc.nextInt();
                 int b = sc.nextInt();
                 for(int j=a-1; j<b; j++) {
-                    System.out.println(nArr[j] + " ");
+                    System.out.print(nArr[j] + " ");
                 }
+                System.out.println();
             }
+            
         }
         
         
