@@ -5,9 +5,9 @@ public class Main {
         String str = sc.next();
         int n = sc.nextInt();
 
-        int len = str.length();
+        int len = str.length()-1;
 
-        for(int i=len-1; i>len-n-1; i--) {
+        for(int i=len; i>len-n; i--) {
             System.out.print(str.charAt(i));
         }
     }
