@@ -19,13 +19,13 @@ public class Main {
         if(ee == true) {
             System.out.print("Yes ");
         } else {
-            System.out.print("No");
+            System.out.print("No ");
         }
 
         if(ab == true) {
             System.out.print("Yes ");
         } else {
-            System.out.print("No");
+            System.out.print("No ");
         }
 
 
