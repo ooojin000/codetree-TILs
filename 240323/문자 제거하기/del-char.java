@@ -1,23 +1,33 @@
 import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
-        int[] arr = new int[20];
-        int cnt = 1;
+        int[] arr = new int[20]; 
+        
+        int length = str.length(); 
+        int index = 0;
 
-        for (int i = 0; i < cnt; i++) {
-            arr[i] = sc.nextInt();
-            
-            if (str.length() >= arr[i]) {
-                str = str.substring(0, arr[i]) + str.substring(arr[i] + 1);
-                cnt++;
+        while (sc.hasNextInt()) {
+            arr[index++] = sc.nextInt();
+        }
+
+        for (int i = 0; i < index; i++) {
+            int num = arr[i];
+
+            if (length == 1) {
+                break;
             } else {
-                str = str.substring(0, str.length() - 1);
+                if (length > num) {
+                    str = str.substring(0, num) + str.substring(num + 1);
+                } else {
+                    str = str.substring(0, length - 1);
+                }
+                length = str.length();
             }
 
             System.out.println(str);
         }
-        
     }
 }
