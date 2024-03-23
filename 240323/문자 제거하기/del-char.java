@@ -1,32 +1,29 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        // 문자열을 입력받습니다.
         String str = sc.next();
-        int[] arr = new int[20]; 
-        
-        int length = str.length(); 
-        int index = 0;
 
-        while (sc.hasNextInt()) {
-            arr[index++] = sc.nextInt();
-        }
+        // 문자열의 길이를 구합니다.
+        int len = str.length();
 
-        for (int i = 0; i < index; i++) {
-            int num = arr[i];
-
-            if (length == 1) {
-                break;
-            } else {
-                if (length > num) {
-                    str = str.substring(0, num) + str.substring(num + 1);
-                } else {
-                    str = str.substring(0, length - 1);
-                }
-                length = str.length();
-            }
-
+        // 문자가 하나 남을 때까지 반복합니다.
+        while(len > 1) {
+            // 정수를 입력받습니다.
+            int a = sc.nextInt();
+            
+            // 정수가 문자열의 길이 이상이면 마지막 문자를 가리키게 변경합니다.
+            if(a >= len)
+                a = len - 1;
+            
+            // a번 자리의 원소를 제거합니다.
+            str = str.substring(0, a) + str.substring(a + 1);
+            len--;
+            
+            // 현재 문자열을 출력합니다.
             System.out.println(str);
         }
     }
