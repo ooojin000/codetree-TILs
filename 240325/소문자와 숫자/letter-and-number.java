@@ -10,7 +10,11 @@ public class Main {
             }
             if(str.charAt(i) >= 'a' && str.charAt(i) <= 'z') {
                 System.out.print(str.charAt(i));
-            } 
+            }
+
+            if(str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+                System.out.print(str.charAt(i));
+            }
         }
     }
 }
