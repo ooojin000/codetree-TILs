@@ -9,7 +9,7 @@ public class Main {
 
         int len = str.length();
 
-        for(int i = 0; i < len; i++) {
+        for(int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
             if(arr[i] == 1) {
                 str = str.substring(1, len) + str.substring(0, 1);
