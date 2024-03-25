@@ -3,8 +3,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
-        StringBuilder sb = new StringBuilder(str);
-
+        
         int n = sc.nextInt();
 
         int[] arr = new int[n];
@@ -24,6 +23,7 @@ public class Main {
             }
 
             if(arr[i] == 3) {
+                StringBuilder sb = new StringBuilder(str);
                 sb.reverse();
                 str = sb.toString();
                 System.out.println(str);
