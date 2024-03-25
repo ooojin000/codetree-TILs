@@ -3,6 +3,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
+        StringBuilder sb = new StringBuilder(str);
+
         int n = sc.nextInt();
 
         int[] arr = new int[n];
@@ -21,13 +23,10 @@ public class Main {
                 System.out.println(str);
             }
 
-            String str1 = "";
-            
             if(arr[i] == 3) {
-                for(int j = len - 1; j >= 0; j--) {
-                    str1 += str.charAt(j);
-                }
-                System.out.println(str1);
+                sb.reverse();
+                str = sb.toString();
+                System.out.println(str);
             }
         }
     }
