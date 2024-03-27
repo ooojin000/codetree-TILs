@@ -8,7 +8,7 @@ public class Main {
         char[] arr1 = str1.toCharArray();
         char[] arr2 = str2.toCharArray();
 
-        int k = 0;
+        int k = -1;
 
         for(int i = 0; i < arr1.length; i++) {
             if(arr1[i] == arr2[0]) {
