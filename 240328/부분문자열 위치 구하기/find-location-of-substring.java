@@ -23,7 +23,7 @@ public class Main {
             } 
         }
 
-        if(k > 0) {
+        if(k >= 0) {
             System.out.print(k);
         } else {
             System.out.print("-1");
