@@ -6,10 +6,9 @@ public class Main {
         int[][] arr = new int[n][n];
 
         int num = 1;
-        int m = n % 2;
         
         for(int j = 0; j < n; j++) {
-            if(j % 2 == m) {
+            if(j % 2 == 0) {
                 for(int i = 0; i < n; i++) {
                     arr[j][i] = num;
                     num++;
