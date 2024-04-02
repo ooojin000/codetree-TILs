@@ -9,6 +9,15 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
+        for(int i = 0; i < n; i++) {
+            for(int j = 1; j < n - i; j++) {
+                if(arr[i] == arr[i + j]) {
+                    arr[i] = 0;
+                    arr[i + j] = 0;
+                }
+            }
+        }
+
         int max = 0;
 
         for(int i = 0; i < n; i++) {
@@ -17,19 +26,13 @@ public class Main {
             }
         }
 
-        int cnt = 0;
-
-        for(int i = 0; i < n; i++) {
-            if(arr[i] == max) {
-                cnt++;
-            }
-        }
-
-        if(cnt == 1) {
+        if(max > 0) {
             System.out.print(max);
         } else {
             System.out.print("-1");
         }
+
+        
         
     }
 }
