@@ -9,27 +9,26 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        for(int i = 0; i < n; i++) {
-            for(int j = 1; j < n - i; j++) {
-                if(arr[i] == arr[i + j]) {
-                    arr[i] = 0;
-                    arr[i + j] = 0;
-                }
-            }
+        int[] duplication = new int[1000];
+
+        for (int i = 0; i < arr.length; i++) {
+            int num = arr[i];
+            duplication[num]++;
         }
 
         int max = 0;
 
-        for(int i = 0; i < n; i++) {
-            if(arr[i] > max) {
-                max = arr[i];
+        for (int i = 0; i < arr.length; i++) {
+            int num = arr[i];
+            if (duplication[num] == 1 && num > max) {
+                max = num;
             }
         }
 
-        if(max > 0) {
-            System.out.print(max);
-        } else {
+        if (max == 0) {
             System.out.print("-1");
+        } else {
+            System.out.print(max);
         }
 
         
