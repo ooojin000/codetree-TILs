@@ -11,13 +11,15 @@ public class Main {
 
         for (int i = 0; i < len; i++) {
             for (int j = 0; j <= i; j++) {
-                arr[i - j][j] = num++;
+                arr[i - j][j] = num;
+                num++;
             }
         }
 
         for (int i = 1; i < len; i++) {
             for (int j = 0; j < len - i; j++) {
-                arr[len - 1 - j][i + j] = num++;
+                arr[len - 1 - j][i + j] = num;
+                num++;
             }
         }
 
