@@ -5,10 +5,8 @@ public class Main {
         int n = sc.nextInt();
         int[] arr = new int[1000];
 
-        int num = 0;
-
         for(int i = 0; i < n; i++) {
-            arr[sc.nextInt() - 1] = num++;
+            arr[sc.nextInt() - 1]++;
         }
 
         int max = 0;
