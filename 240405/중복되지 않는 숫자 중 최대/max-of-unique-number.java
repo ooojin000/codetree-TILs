@@ -3,33 +3,26 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] arr = new int[n];
+        int[] arr = new int[1000];
+
+        int num = 0;
 
         for(int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        for(int i = 0; i < n; i++) {
-            for(int j = 1; j < n - i; j++) {
-                if(arr[i] == arr[i + j]) {
-                    arr[i] = 0;
-                    arr[i + j] = 0;
-                }
-            }
+            arr[sc.nextInt() - 1] = num++;
         }
 
         int max = 0;
 
-        for(int i = 0; i < n; i++) {
-            if(arr[i] > max) {
-                max = arr[i];
+        for(int i = 0; i < 1000; i++) {
+            if(arr[i] == 1 && (i + 1) > max) {
+                max = i + 1;
             }
         }
 
-        if(max > 0) {
-            System.out.print(max);
+        if(max == 0) {
+            System.out.print(-1);
         } else {
-            System.out.print("-1");
+            System.out.print(max);
         }
 
         
