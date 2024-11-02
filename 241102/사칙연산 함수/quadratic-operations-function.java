@@ -12,7 +12,7 @@ public class Main {
 
     public static void calc(int a, char o, int c) {
         if (o == '+')
-            System.out.print(a + " + " + c + " = " + a + c);
+            System.out.print(a + " + " + c + " = " + (a + c));
         else if (o == '-')
             System.out.print(a + " - " + c + " = " + (a - c));
         else if (o == '*') 
