@@ -28,7 +28,7 @@ public class Main {
         boolean result = false;
         for(int i = 0; i < arr1.length; i++) {
             if(arr2[0] == arr1[i]) {
-                for(int j = 0; j < arr2.length; j++) {
+                for(int j = 0; j < arr1.length - arr2.length; j++) {
                     if(arr1[i] == arr2[j]) {
                         result = true;
                     } 
