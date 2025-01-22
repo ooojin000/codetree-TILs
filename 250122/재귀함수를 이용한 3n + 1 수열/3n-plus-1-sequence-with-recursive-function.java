@@ -9,18 +9,12 @@ public class Main {
     }
 
     public static int F(int n) {
-        int cnt = 0;
-
-        while (n > 1) {
-            if(n % 2 == 0) {
-                n /= 2;
-                cnt++;
-            } else {
-                n = n * 3 + 1;
-                cnt++;
-            }
-        }
-        
-        return cnt;
+        if(n == 1)
+            return 0;
+    
+        if(n % 2 == 0)
+            return F(n / 2) + 1;
+        else
+            return F(3 * n + 1) + 1;
     }
 }
