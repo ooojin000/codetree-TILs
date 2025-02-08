@@ -18,15 +18,15 @@ public class Main {
         Arrays.sort(aArr);
         Arrays.sort(bArr);
 
-        int cnt = 0;
+        boolean result = true;
 
         for(int i = 0; i < n; i++) {
             if(aArr[i] != bArr[i]) {
-                cnt++;
+                result = false;
             }
         }
 
-        if(cnt == 0) {
+        if(result) {
             System.out.print("Yes");
         } else {
             System.out.print("No");
