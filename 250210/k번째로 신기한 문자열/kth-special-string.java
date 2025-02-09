@@ -14,7 +14,7 @@ public class Main {
         for(int i = 0; i < n; i++) {
             arr1[i] = sc.next();
 
-            if(arr1[i].length() > str1.length()) {
+            if(arr1[i].length() >= str1.length()) {
                 String str2 = arr1[i].substring(0, str1.length());  
 
                 if(str2.equals(str1)) {
@@ -29,7 +29,7 @@ public class Main {
         String[] arr2 = new String[cnt];
 
         for(int i = 0; i < n; i++) {
-            if(arr1[i].length() > str1.length()) {
+            if(arr1[i].length() >= str1.length()) {
                 String str2 = arr1[i].substring(0, str1.length());
             
                 if(str2.equals(str1)) {
