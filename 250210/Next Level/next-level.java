@@ -7,11 +7,17 @@ public class Main {
         int n = sc.nextInt();
 
         UserInfo userInfo = new UserInfo();
+
+        userInfo.id = "codetree";
+        userInfo.level = 10;
+
         System.out.println("user " + userInfo.id + " lv " + userInfo.level);
 
-        userInfo.id = str;
-        userInfo.level = n;
-        System.out.println("user " + userInfo.id + " lv " + userInfo.level);
+        UserInfo userInfo2 = new UserInfo();
+
+        userInfo2.id = str;
+        userInfo2.level = n;
+        System.out.println("user " + userInfo2.id + " lv " + userInfo2.level);
     }
 }
 
@@ -20,8 +26,8 @@ class UserInfo {
     int level;
 
     public UserInfo() {
-        this.id = "codetree";
-        this.level = 10;
+        this.id = "";
+        this.level = 0;
     }
 
     public UserInfo(String id, int level) {
