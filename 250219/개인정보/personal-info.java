@@ -24,8 +24,8 @@ public class Main {
 
         Arrays.sort(students, new Comparator<Student>() {
             @Override
-            public int compare(Student s1, Student s2) {
-                return Integer.compare(s2.height, s1.height);
+            public int compare(Student a, Student b) {
+                return Integer.compare(b.height, a.height);
             }
         });
 
