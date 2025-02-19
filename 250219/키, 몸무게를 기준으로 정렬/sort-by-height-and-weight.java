@@ -16,8 +16,7 @@ public class Main {
         Arrays.sort(students, (a, b) -> {
             if(a.height != b.height) 
                 return a.height - b.height;
-            else
-                return b.weight - a.weight;
+            return b.weight - a.weight;
         });
 
         for(int i = 0; i < n; i++) {
