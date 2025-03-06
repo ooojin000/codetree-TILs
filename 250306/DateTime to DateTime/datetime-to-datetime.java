@@ -10,7 +10,7 @@ public class Main {
 
         int dateTime2 = A * 24 * 60 + B * 60 + C;
 
-        if(dateTime1 < dateTime2) {
+        if(dateTime1 <= dateTime2) {
             System.out.print(dateTime2 - dateTime1);
         } else {
             System.out.print(-1);
