@@ -6,10 +6,12 @@ public class Main {
         int B = sc.nextInt();
         int C = sc.nextInt();
         
-        int elapsedMin = 0;
+        int dateTime1 = 11 * 24 * 60 + 11 * 60 + 11;
 
-        if(A >= 11 && B >= 11 && C >= 11) {
-            System.out.print((A - 11) * 24 * 60 + (B - 11) * 60 + (C - 11)); 
+        int dateTime2 = A * 24 * 60 + B * 60 + C;
+
+        if(dateTime1 < dateTime2) {
+            System.out.print(dateTime2 - dateTime1);
         } else {
             System.out.print(-1);
         }
