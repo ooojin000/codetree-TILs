@@ -25,24 +25,15 @@ public class Main {
     }
 
     public static int elapsedDays(int m, int d) {
-        int month = 1, day = 1;
         int elapsedDays = 0;
 
         int[] num_of_days = new int[]{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-        while(true) {
-            if(month == m && day == d)
-                break;
-            
-            elapsedDays++;
-            day++;
-
-            if(day > num_of_days[month]) {
-                month++;
-                day = 1;
-            }
+        for(int i = 0; i < m; i++) {
+            elapsedDays += num_of_days[i];
         }
-
+        elapsedDays += d;
+        
         return elapsedDays;
     }
 }
