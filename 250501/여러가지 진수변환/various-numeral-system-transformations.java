@@ -5,18 +5,19 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int b = sc.nextInt();
+        int cnt = 0;
 
-        if(b == 4) 
-            quaternary(n);
-        else
-            octal(n);
-    }
-
-    public static void quaternary(int n) {
-        System.out.print(Integer.toString(n, 4));
-    }
-
-    public static void octal(int n) {
-        System.out.print(Integer.toString(n, 8));
+        while(true) {
+            if(n < b) {
+                digits[cnt++] = n;
+                break;
+            }
+            
+            digits[cnt++] = n % b;
+            n /= b;
+        }
+        
+        for(int i = cnt - 1; i >= 0; i--)
+            System.out.print(digits[i]);
     }
 }
