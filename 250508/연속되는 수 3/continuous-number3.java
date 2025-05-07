@@ -16,6 +16,8 @@ public class Main {
                 cnt++;
             else if (i >= 1 && arr[i] < 0 && arr[i - 1] < 0)
                 cnt++;
+            else
+                cnt = 1;
             
             max = Math.max(max, cnt);
         }
