@@ -9,7 +9,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        int cnt = 1;
+        int cnt = 0;
         int max = 0;
 
         for (int i = 0; i < n - 1; i++) {
