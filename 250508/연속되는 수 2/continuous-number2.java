@@ -22,6 +22,10 @@ public class Main {
             }
         }
 
-        System.out.print(max);
+        if (n == 1) {
+            System.out.print(0);
+        } else {
+            System.out.print(max);
+        }
     }
 }
