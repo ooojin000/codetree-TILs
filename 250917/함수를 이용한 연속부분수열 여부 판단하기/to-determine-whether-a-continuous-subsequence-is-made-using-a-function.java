@@ -16,7 +16,7 @@ public class Main {
 
         boolean result = false;
         
-        for (int i = 0; i < n1 - n2; i++) {
+        for (int i = 0; i <= n1 - n2; i++) {
             if (a[i] == b[0]) {
                 result = true;
                 for (int j = 0; j < n2; j++) {
