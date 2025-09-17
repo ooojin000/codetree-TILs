@@ -12,13 +12,16 @@ public class Main {
         for (int i = 0; i <= text.length() - pattern.length(); i++) {
             if (text.charAt(i) == pattern.charAt(0))
             result = true;
-            cnt = i;
             for (int j = 0; j < pattern.length(); j++) {
                 if (text.charAt(i + j) != pattern.charAt(j)) {
                     result = false;
+                    break;
                 } else {
                     result = true;
                 }
+            }
+            if (result) {
+                cnt = i;
                 break;
             }
         }
