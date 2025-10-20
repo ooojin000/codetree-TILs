@@ -16,6 +16,7 @@ public class Main {
             } else if (cArr[i] == ')') {
                 if (stack.empty()) {
                     System.out.print("No");
+                    return;
                 }
                 stack.pop();
             }
