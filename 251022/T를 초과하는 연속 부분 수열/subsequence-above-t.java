@@ -15,11 +15,10 @@ public class Main {
         for (int i = 0; i < n - 1; i++) {
             if (arr[i] > t) {
                 cnt++;
+                max = Math.max(max, cnt);
             } else {
-                cnt = 1;
+                cnt = 0;
             }
-
-            max = Math.max(max, cnt);
         }
 
         System.out.print(max);
