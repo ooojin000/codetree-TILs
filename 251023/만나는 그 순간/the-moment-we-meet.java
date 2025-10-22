@@ -11,12 +11,12 @@ public class Main {
 
         int sec = 1;
         int pos = 0;
-        
+
         for (int i = 0; i < n; i++) {
             char c = sc.next().charAt(0);
             int t = sc.nextInt();
-            
-            for (int j = sec; j <= t; j++) {
+
+            for (int j = sec; j < t + sec; j++) {
                 if (c == 'R') {
                     nArr[j] = ++pos;
                 } else if (c == 'L') {
@@ -32,8 +32,8 @@ public class Main {
         for (int i = 0; i < m; i++) {
             char c = sc.next().charAt(0);
             int t = sc.nextInt();
-            
-            for (int j = sec; j <= t; j++) {
+
+            for (int j = sec; j < t + sec; j++) {
                 if (c == 'R') {
                     mArr[j] = ++pos;
                 } else if (c == 'L') {
@@ -52,6 +52,6 @@ public class Main {
             }
         }
 
-        System.out.print(result - 1);
+        System.out.print(result);
     }
 }
